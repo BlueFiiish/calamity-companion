@@ -1,5 +1,5 @@
 // Calamity Companion service worker — offline app shell + cross-origin sprite cache.
-const VERSION = 'cc-v2';
+const VERSION = 'cc-v3';
 const SHELL = VERSION + '-shell';
 const IMGS = VERSION + '-img';
 const PRECACHE = [
@@ -34,19 +34,11 @@ self.addEventListener('fetch', e => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
 
-  // Item sprites live cross-origin on the game wikis (Special:FilePath).
-  // Cache-first so the app works offline after items have been browsed once.
-  if (url.hostname.endsWith('calamitymod.wiki.gg') || url.hostname.endsWith('terraria.wiki.gg')) {
-    e.respondWith(
-      caches.match(req).then(hit => hit || fetch(req).then(res => {
-        const copy = res.clone();
-        caches.open(IMGS).then(c => c.put(req, copy));
-        return res;
-      }).catch(() => hit))
-    );
-    return;
-  }
-
+  // Item sprites live cross-origin on the game wikis (Special:FilePath issues a
+  // redirect to the real file). Do NOT intercept them: routing an opaque/redirected
+  // no-cors response through the SW cache poisons it (broken "?" sprites on first
+  // visit). The browser loads them natively and reliably; only the app shell + data
+  // are cached for offline. So let all cross-origin requests pass straight through.
   if (url.origin !== location.origin) return;
 
   // data JSON: network-first so refreshed data lands, fall back to cache offline
