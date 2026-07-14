@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0e0d1a" />
+  <meta name="description" content="Private household budget tracker — import bank & credit-card transactions from CSV, auto-categorize, and track a shared budget. All data stays on your device." />
+  <meta name="robots" content="noindex" />
+  <title>Household Budget</title>
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./css/budget.css" />
+</head>
+<body class="budget">
+  <header id="topbar">
+    <div class="brand">
+      <span class="brand-mark">&#128176;</span>
+      <span>Household <b>Budget</b></span>
+    </div>
+    <div class="top-right">
+      <select id="monthSelect" class="month-select" aria-label="Month"></select>
+    </div>
+  </header>
+
+  <main id="app"><!-- views render here --></main>
+
+  <nav id="tabbar">
+    <button class="tab" data-view="overview" aria-label="Overview"><span class="ic">&#128202;</span><span>Overview</span></button>
+    <button class="tab" data-view="tx" aria-label="Transactions"><span class="ic">&#129534;</span><span>Activity</span></button>
+    <button class="tab" data-view="import" aria-label="Import"><span class="ic">&#128228;</span><span>Import</span></button>
+    <button class="tab" data-view="budget" aria-label="Budget"><span class="ic">&#127919;</span><span>Budget</span></button>
+    <button class="tab" data-view="settings" aria-label="Settings"><span class="ic">&#9881;</span><span>Setup</span></button>
+  </nav>
+
+  <div id="sheet" class="sheet" hidden>
+    <div class="sheet-backdrop" data-close></div>
+    <div class="sheet-body" id="sheetBody" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="./js/budget.js"></script>
+</body>
+</html>
