@@ -45,13 +45,13 @@ const DEFAULT_RULES = [
   ['Subscriptions', ['netflix','spotify','hulu','disney+','disney plus','amazon prime','prime video','youtube','apple.com/bill','apple.com','google *','hbo','max.com','patreon','audible','icloud','dropbox','adobe','microsoft','onedrive','peacock','paramount+','sirius','nyt','ny times','openai','anthropic','chatgpt']],
   ['Shopping', ['amazon','amzn','target','best buy','ebay','etsy','home depot','lowe\'s','lowes','ikea','wayfair','macy','nordstrom','kohl','ross ','tj maxx','tjmaxx','marshalls','old navy','gap ','nike','adidas','dick\'s sport','academy','michaels','hobby lobby','five below','dollar tree','dollar general','family dollar','bath & body','ulta','sephora','shein','temu','wish.com']],
   ['Health', ['pharmacy','cvs','walgreens','doctor','medical','dental','clinic','hospital','urgent care','optometr','vision','labcorp','quest diag','copay','health','wellmed','goodrx','fitness','gym','planet fit','lifetime','peloton']],
-  ['Entertainment', ['cinema','movie','amc ','regal','steam games','steampowered','playstation','xbox','nintendo','ticketmaster','stubhub','fandango','epic games','twitch','concert','museum','zoo ','theme park','six flags','arcade','bowling','golf','dave & buster']],
+  ['Entertainment', ['cinema','movie','amc ','regal','steam games','steampowered','steam purchase','playstation','xbox','nintendo','ticketmaster','stubhub','fandango','epic games','twitch','concert','museum','zoo ','theme park','six flags','arcade','bowling','golf','dave & buster']],
   ['Transport', ['uber','lyft','parking','toll','turnpike','ntta','txtag','ez tag','transit','metro','amtrak','airline','southwest air','american air','delta air','united air','frontier air','spirit air','airport','rental car','enterprise rent','hertz','avis']],
   ['Kids', ['daycare','preschool','kindercare','school','tuition','children','toys r','carter','babies','diaper','pediatric','kids ']],
   ['Pets', ['petco','petsmart','chewy','veterinar',' vet ','animal hosp','pet supply','dog ','cat food']],
   ['Fees', ['overdraft','nsf fee','service charge','service fee','interest charge','late fee','atm fee','foreign trans','annual fee','finance charge','maintenance fee']],
   ['Income', ['payroll','direct deposit','dir dep','salary','deposit','refund','irs treas','tax ref','interest paid','interest earned','cashback bonus','cash back bonus','reward','dividend','venmo cashout']],
-  ['Transfer/Payment', ['payment thank','payment - thank','autopay','online payment','automatic payment','internetpayment','e-payment','epayment','transfer','xfer','zelle','venmo payment','cash app','paypal transfer','withdrawal','atm withdrawal','bill pay','billpay','pymt','directpay','card payment','pymnt']],
+  ['Transfer/Payment', ['payment thank','payment - thank','autopay','online payment','online pmt','automatic payment','internetpayment','e-payment','epayment','transfer','xfer','zelle','venmo payment','cash app','paypal transfer','withdrawal','atm withdrawal','bill pay','billpay','pymt','pmt','directpay','card payment','card pmt','cc pmt','pymnt']],
 ];
 
 /* ---------- default accounts (from the user's setup) ---------- */
